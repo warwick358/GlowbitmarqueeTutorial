@@ -5,11 +5,15 @@ in this step we will be setting up the microbit to use the neopixal LED's
 and then setting the brightness  
 
 ```blocks
+
 let counter = 0
 let strip = neopixel.create(DigitalPin.P0, 13, NeoPixelMode.RGB)
 strip.setBrightness(50)
-
+```
 ## Step 2
+in this step we will 
+
+```blocks 
 basic.forever(function () {
     for (let index = 0; index <= 12; index++) {
         if ((index - counter) % 3 == 0) {
@@ -21,7 +25,7 @@ basic.forever(function () {
     counter += 1
     strip.clear()
 })
-
+```
 
 
 
