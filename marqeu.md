@@ -48,7 +48,9 @@ strip.setBrightness(50)
 ```
 ## step 6 create the loop
 we will now start working on the "forever' block.
-
+In this section we will tell the microbit how to use the GlowBit's LED lights.
+We will start with the "loop" tab. and look for a "for do" loop.
+``||loop:for index do||``
 
 ## all the code
 let strip = neopixel.create(DigitalPin.P0, 13, NeoPixelMode.RGB)
