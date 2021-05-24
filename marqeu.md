@@ -55,7 +55,7 @@ In this section we will tell the microbit how to use the GlowBit's LED lights.
 We will start with the "loop" tab and look for a "for do" loop placce it in the forever loop. 
 Change the number from "4" to "12"
 
-```block
+```blocks
 basic.forever(function () {
     for (let index = 0; index <= 12; index++) {
     	
@@ -63,7 +63,7 @@ basic.forever(function () {
 })
 ```
 
-# step 7
+## step 7
 we will then add a if statement to tell the microbit to use ever 3rd LED.
 go to the "logic" tab and get the "if true then" block place it in the "for do" loop. 
 
