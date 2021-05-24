@@ -8,7 +8,7 @@ in this section you will need to select the neopixal extention
 ## step 2
 Next we will create a variable calles "strip" click the "variable" tab
 in the blocks then make a variable call it "strip".
-go to the neopixal tab and get the ``||neopixal:set strip||`` block and place 
+go to the neopixal tab and get the "neopixal" tab and select the  "set strip" block and place 
 it in the "on start" block. 
 
 ```blocks
@@ -28,7 +28,7 @@ let strip = neopixel.create(DigitalPin.P0, 13, NeoPixelMode.RGB)
 ```
 ## Step 4
 In this step we will set the brightness to 50%. We will go to the "more" tab
-under the "neopixal" tab. ``||neopixal:setBrightness||``
+under the "neopixal" tab and select the "setBrightness" block.
 
 
 ```blocks 
@@ -38,7 +38,7 @@ strip.setBrightness(50)
 
 ## Step 5
 This is the last step for the "on start" block. 
-Go the the "variable" tab abs select ``||variable:set||`` 
+Go the the "variable" tab abs select the "set" block. 
 chose the variable counter.
 
 ```blocks
@@ -49,9 +49,7 @@ strip.setBrightness(50)
 ## step 6 create the loop
 we will now start working on the "forever' block.
 In this section we will tell the microbit how to use the GlowBit's LED lights.
-We will start with the "loop" tab. and look for a "for do" loop.
-``||loop:for index do||`` 
-
+We will start with the "loop" tab. and look for a "for do" loop placce it in the forever loop. 
 
 ```block
 basic.forever(function () {
@@ -64,7 +62,7 @@ basic.forever(function () {
 
 # step 7
 we will then add a if statement to tell the microbit to use ever 3rd LED.
-``||logic:if||`` 
+go to the "logic" tab and get the "if true then" block place it in the "for do" loop. 
 
 
 ```blocks
@@ -106,9 +104,15 @@ basic.forever(function () {
         }
     }
     ```
-## step 10
+## step 10 Displaying the LED'
+In these last few steps we controll how fast the led's flash and make them display.
+go to "basic" tab and chose the "pause" block Place it under the "if then" block.
+set the pause to 200 miliseconds.
+go to the "neopixal" tab and chose the "show strip" block and place it under the "pause block"
+go to the "variable" tab and chose the "change" block (change the dropdown to "counter")
+go to the "neopixal" tab and chose the "strip clear" block and place it under the "change" block
 
-## all the code
+```block
 let strip = neopixel.create(DigitalPin.P0, 13, NeoPixelMode.RGB)
 strip.setBrightness(50)
 let counter = 0
@@ -123,3 +127,24 @@ basic.forever(function () {
     counter += 1
     strip.clear()
 })
+```
+## step 11 check the code
+your code should look lioke the example below and be ready to download to the Microbit.
+
+```block
+
+let strip = neopixel.create(DigitalPin.P0, 13, NeoPixelMode.RGB)
+strip.setBrightness(50)
+let counter = 0
+basic.forever(function () {
+    for (let index = 0; index <= 13; index++) {
+        if ((index - counter) % 3 == 0) {
+            strip.setPixelColor(index, neopixel.colors(NeoPixelColors.Violet))
+        }
+    }
+    basic.pause(200)
+    strip.show()
+    counter += 1
+    strip.clear()
+})
+```
