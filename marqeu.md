@@ -3,7 +3,8 @@
 ## Step 1 setup
 We will start with setting up the microbit to use the neopixal LED's
 in the blocks section click the "advanced" then click "extention" 
-in this section you will need to select the neopixal extention
+in this section you will need to select the neopixal extention.
+This has been done in the tutorial for you.
 
 ## step 2
 Next we will create a variable calles "strip" click the "variable" tab
