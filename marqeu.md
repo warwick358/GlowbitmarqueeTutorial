@@ -77,21 +77,36 @@ basic.forever(function () {
 })
 ```
 ## step 8 adding information to the if statement 
+This is a complicate section so make sure your code matches the example before moving on.
+
 Next we open the "logic" tab and scroll down to the comparison section we are looking 
-for the "0=0" block and we will place it in the "true" part of the if ststement.
-then we will open the "math" tab and find the "remainder of" block and replace the first 0
-of the  "0=0" block.
-then replace the frist 
+for the "0=0" block and we will place it in the "true" part of the if statement.
+then we will open the "math" tab and find the "remainder of" block. Place this block in the 
+"true" space of the if statement.
+In the "remainder of" block  replace the first 0 of the  with another "math" block "0-0"
+then replace the frist "0" with a "Variable" "index" and the second "0" with the "variable" "counter"
 
 ```blocks
+basic.forever(function () {
+    for (let index = 0; index <= 13; index++) {
+        if ((index - counter) % 3 == 0) {
+        }
+    }
+```
+## step 9 setting the led colour
+Go to the "neopixal more" tab and look for the "strip set pixal colour" block 
+and put in the next section of the "if then" block.
+change the "0" to the "variable" "index" and chose a colour in the drop down menu.
+
+```block
 basic.forever(function () {
     for (let index = 0; index <= 13; index++) {
         if ((index - counter) % 3 == 0) {
             strip.setPixelColor(index, neopixel.colors(NeoPixelColors.Violet))
         }
     }
-```
-
+    ```
+## step 10
 
 ## all the code
 let strip = neopixel.create(DigitalPin.P0, 13, NeoPixelMode.RGB)
