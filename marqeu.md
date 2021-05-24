@@ -61,7 +61,7 @@ basic.forever(function () {
     	
     }
 })
-    ```
+```
 
 # step 7
 we will then add a if statement to tell the microbit to use ever 3rd LED.
