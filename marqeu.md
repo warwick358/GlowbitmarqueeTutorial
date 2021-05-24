@@ -49,6 +49,7 @@ let counter = 0
 let strip = neopixel.create(DigitalPin.P0, 13, NeoPixelMode.RGB)
 strip.setBrightness(50)
 ```
+
 ## step 6 create the loop
 We will now start working on the "forever' block.
 In this section we will tell the microbit how to use the GlowBit's LED lights.
@@ -94,6 +95,7 @@ basic.forever(function () {
         }
     }
 ```
+
 ## step 9 setting the led colour
 Go to the "neopixal more" tab and look for the "strip set pixal colour" block 
 and put in the next section of the "if then" block.
@@ -106,8 +108,9 @@ basic.forever(function () {
             strip.setPixelColor(index, neopixel.colors(NeoPixelColors.Violet))
         }
     }
-    ```
-## step 10 Displaying the LED'
+```
+
+## step 10 Displaying the LED's
 In these last few steps we controll how fast the led's flash and make them display.
 go to "basic" tab and chose the "pause" block Place it under the "if then" block.
 set the pause to 200 miliseconds.
@@ -131,6 +134,7 @@ basic.forever(function () {
     strip.clear()
 })
 ```
+
 ## step 11 check the code
 your code should look lioke the example below and be ready to download to the Microbit.
 
