@@ -26,13 +26,12 @@ alos make sure the LED'd are set as "RGB" this is the tupe of light we have.
 let strip = neopixel.create(DigitalPin.P0, 13, NeoPixelMode.RGB)
 
 ```
+
 ## Step 4
 In this step we will set the brightness. LED's use a scale from 0 - 255 for brighness.
 We will go to the "more" tab
 under the "neopixal" tab and select the "setBrightness" block place it under the "set strip" block.
 Change the number to 50.
-
-
 
 ```blocks 
 let strip = neopixel.create(DigitalPin.P0, 13, NeoPixelMode.RGB)
@@ -67,7 +66,6 @@ basic.forever(function () {
 # step 7
 we will then add a if statement to tell the microbit to use ever 3rd LED.
 go to the "logic" tab and get the "if true then" block place it in the "for do" loop. 
-
 
 ```blocks
 basic.forever(function () {
