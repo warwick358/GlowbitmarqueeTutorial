@@ -26,8 +26,10 @@ let strip = neopixel.create(DigitalPin.P0, 13, NeoPixelMode.RGB)
 
 ```
 ## Step 4
-In this step we will set the brightness to 50%. We will go to the "more" tab
-under the "neopixal" tab and select the "setBrightness" block change the number to 50.
+In this step we will set the brightness. LED's use a scale from 0 - 255 for brighness.
+We will go to the "more" tab
+under the "neopixal" tab and select the "setBrightness" block place it under the "set strip" block.
+Change the number to 50.
 
 
 
@@ -38,8 +40,8 @@ strip.setBrightness(50)
 
 ## Step 5
 This is the last step for the "on start" block. 
-Go the the "variable" tab abs select the "set" block. 
-Change the drop down to the variable "counter".
+Go the the "variable" tab make a new variable "counter".
+select the "set" block change the drop down to the variable "counter". 
 
 ```blocks
 let counter = 0
@@ -49,7 +51,8 @@ strip.setBrightness(50)
 ## step 6 create the loop
 We will now start working on the "forever' block.
 In this section we will tell the microbit how to use the GlowBit's LED lights.
-We will start with the "loop" tab. and look for a "for do" loop placce it in the forever loop. 
+We will start with the "loop" tab and look for a "for do" loop placce it in the forever loop. 
+Change the number from "4" to "12"
 
 ```block
 basic.forever(function () {
@@ -57,7 +60,6 @@ basic.forever(function () {
     	
     }
 })
-
     ```
 
 # step 7
