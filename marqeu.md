@@ -50,14 +50,55 @@ strip.setBrightness(50)
 we will now start working on the "forever' block.
 In this section we will tell the microbit how to use the GlowBit's LED lights.
 We will start with the "loop" tab. and look for a "for do" loop.
-``||loop:for index do||``
+``||loop:for index do||`` 
+
+
+```block
+basic.forever(function () {
+    for (let index = 0; index <= 12; index++) {
+    	
+    }
+})
+
+    ```
+
+# step 7
+we will then add a if statement to tell the microbit to use ever 3rd LED.
+``||logic:if||`` 
+
+
+```blocks
+basic.forever(function () {
+    for (let index = 0; index <= 12; index++) {
+        if (true) {
+        	
+        }
+    }
+})
+```
+## step 8 adding information to the if statement 
+Next we open the "logic" tab and scroll down to the comparison section we are looking 
+for the "0=0" block and we will place it in the "true" part of the if ststement.
+then we will open the "math" tab and find the "remainder of" block and replace the first 0
+of the  "0=0" block.
+then replace the frist 
+
+```blocks
+basic.forever(function () {
+    for (let index = 0; index <= 13; index++) {
+        if ((index - counter) % 3 == 0) {
+            strip.setPixelColor(index, neopixel.colors(NeoPixelColors.Violet))
+        }
+    }
+```
+
 
 ## all the code
 let strip = neopixel.create(DigitalPin.P0, 13, NeoPixelMode.RGB)
 strip.setBrightness(50)
 let counter = 0
 basic.forever(function () {
-    for (let index = 0; index <= 12; index++) {
+    for (let index = 0; index <= 13; index++) {
         if ((index - counter) % 3 == 0) {
             strip.setPixelColor(index, neopixel.colors(NeoPixelColors.Violet))
         }
