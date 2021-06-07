@@ -1,23 +1,17 @@
-# marque
+# Marque
 
-## Step 1 setup
-We will start with setting up the microbit to use the neopixal LED's
-in the blocks section click the "advanced" then click "extention" 
-in this section you will need to select the neopixal extention.
-This has been done in the tutorial for you.
-
-## step 2
-Next we will create a variable calles "strip" click the "variable" tab
-in the blocks then make a variable call it "strip". 
-Go to the "neopixal" tab and get the  "set strip" block and place it in the "on start" block. 
+## step 1
+To start we will create a variable called "strip" click the "variable" tab
+In the blocks then make a variable call it "strip". 
+Go to the "neopixal" tab and get the "set strip" block and place it in the "on start" block. 
 
 ```blocks
 let strip = neopixel.create(DigitalPin.P0, 24, NeoPixelMode.RGB)
 
 ```
 
-## step 3
-make sure that the pin = "0" this is where we connect the wire on the microbit.
+## step 2
+Make sure that the pin = "0" this is where we connect the wire on the microbit.
 Then change the number of LED's to "13" this is how many lights we have on the GlowBit.
 alos make sure the LED'd are set as "RGB" this is the tupe of light we have.
 
@@ -27,7 +21,7 @@ let strip = neopixel.create(DigitalPin.P0, 13, NeoPixelMode.RGB)
 
 ```
 
-## Step 4
+## Step 3
 In this step we will set the brightness. LED's use a scale from 0 - 255 for brighness.
 We will go to the "more" tab
 under the "neopixal" tab and select the "setBrightness" block place it under the "set strip" block.
@@ -38,10 +32,10 @@ let strip = neopixel.create(DigitalPin.P0, 13, NeoPixelMode.RGB)
 strip.setBrightness(50)
 ```
 
-## Step 5
+## Step 4
 This is the last step for the "on start" block. 
 Go the the "variable" tab make a new variable "counter".
-select the "set" block change the drop down to the variable "counter". 
+select the "set" block change the drop down to the variable "counter" leave the "0" as is. 
 
 ```blocks
 let counter = 0
@@ -49,7 +43,7 @@ let strip = neopixel.create(DigitalPin.P0, 13, NeoPixelMode.RGB)
 strip.setBrightness(50)
 ```
 
-## step 6 create the loop
+## step 5 create the loop
 We will now start working on the "forever' block.
 In this section we will tell the microbit how to use the GlowBit's LED lights.
 We will start with the "loop" tab and look for a "for do" loop placce it in the forever loop. 
@@ -63,9 +57,9 @@ basic.forever(function () {
 })
 ```
 
-## step 7
-we will then add a if statement to tell the microbit to use ever 3rd LED.
-go to the "logic" tab and get the "if true then" block place it in the "for do" loop. 
+## step 6
+We will then add a if statement to tell the microbit to use ever 3rd LED.
+Go to the "logic" tab and get the "if true then" block place it in the "for do" loop. 
 
 ```blocks
 basic.forever(function () {
@@ -76,14 +70,16 @@ basic.forever(function () {
     }
 })
 ```
-## step 8 adding information to the if statement 
+## step 7 adding information to the if statement 
 This is a complicate section so make sure your code matches the example before moving on.
 
-Next we open the "logic" tab and scroll down to the comparison section we are looking 
+Start by opening the "logic" tab and scroll down to the comparison section we are looking 
 for the "0=0" block and we will place it in the "true" part of the if statement.
-then we will open the "math" tab and find the "remainder of" block. Place this block in the 
-"true" space of the if statement.
-In the "remainder of" block  replace the first 0 of the  with another "math" block "0-0"
+
+Then we will open the "math" tab and find the "remainder of" block. Place this block in the first "0" of the "0=0" block.
+
+In the "remainder of" block  replace the first 0 of the  with another "math" block "0-0".
+
 then replace the frist "0" with a "Variable" "index" and the second "0" with the "variable" "counter"
 
 ```blocks
@@ -94,7 +90,7 @@ basic.forever(function () {
     }
 ```
 
-## step 9 setting the led colour
+## step 8 setting the led colour
 Go to the "neopixal more" tab and look for the "strip set pixal colour" block 
 and put in the next section of the "if then" block.
 change the "0" to the "variable" "index" and chose a colour in the drop down menu.
@@ -108,7 +104,7 @@ basic.forever(function () {
     }
 ```
 
-## step 10 Displaying the LED's
+## step 9 Displaying the LED's
 In these last few steps we controll how fast the led's flash and make them display.
 go to "basic" tab and chose the "pause" block Place it under the "if then" block.
 set the pause to 200 miliseconds.
@@ -133,7 +129,7 @@ basic.forever(function () {
 })
 ```
 
-## step 11 check the code
+## step 10 check the code
 your code should look lioke the example below and be ready to download to the Microbit.
 
 ```block
