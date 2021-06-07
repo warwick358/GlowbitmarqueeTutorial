@@ -1,6 +1,7 @@
 # Marque
 
 ## step 1
+Setup
 To start we will create a variable called "strip" click the "variable" tab
 In the blocks then make a variable call it "strip". 
 Go to the "neopixal" tab and get the "set strip" block and place it in the "on start" block. 
@@ -11,6 +12,7 @@ let strip = neopixel.create(DigitalPin.P0, 24, NeoPixelMode.RGB)
 ```
 
 ## step 2
+Setup
 Make sure that the pin = "0" this is where we connect the wire on the microbit.
 Then change the number of LED's to "13" this is how many lights we have on the GlowBit.
 alos make sure the LED'd are set as "RGB" this is the tupe of light we have.
